@@ -1,0 +1,46 @@
+.today {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-block-end: 3.5rem;
+  padding-block-start: 3.5rem;
+}
+
+.icon {
+  background-color: #4A90E2;
+  width: 4rem;
+  height: 4rem;
+  margin-inline-end: 1rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+}
+
+.overline {
+  font-size: .875rem;
+  color: rgba(0,0,0,0.87);
+  letter-spacing: 0.02px;
+  line-height: 1rem;
+}
+
+.maxTemperature {
+  font-size: 2rem;
+  color: rgba(0,0,0,0.87);
+  letter-spacing: 0.04px;
+  line-height: 2rem;
+  font-weight: bold;
+}
+
+.minTemperature {
+  font-size: 1rem;
+  color: rgba(0,0,0,0.70);
+  letter-spacing: 0.02px;
+  line-height: 2rem;
+}

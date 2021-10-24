@@ -1,0 +1,41 @@
+.day {
+  width: 4rem;
+  height: 11.25rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 1rem;
+  color: rgba(0,0,0,0.60);
+  letter-spacing: 0.02px;
+  text-align: center;
+  margin-block-end: .5rem;
+}
+
+.card {
+  background-color: #4A90E2;
+  border-radius: .75rem;
+  flex: 1;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-block-start: 1rem;
+  padding-block-end: .5rem;
+  padding-inline-start: .5rem;
+  padding-inline-end: .5rem;
+}
+
+.icon {
+
+}
+
+.temperature {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 0.03px;
+  text-align: center;
+  line-height: 1.5rem;
+}

@@ -1,0 +1,29 @@
+.page {
+  padding: 1rem;
+}
+
+.header {
+  display: flex;
+}
+
+.input {
+  flex: 1;
+  margin-inline-end: .5rem;
+}
+
+.nextDays {
+  max-width: 18rem;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  column-gap: .5rem;
+}
+
+.content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem;
+}
