@@ -5,9 +5,10 @@ Welcome to the roup app repository.
 In order to run the app locally, follow next steps:
 
 1. clone repository
-2. rename .env.example to .env.local
-3. define api base url (in env file)
-4. run `yarn start`
+2. install dependencies (`yarn`)
+3. rename .env.example to .env.local
+4. define api base url (in env file)
+5. run `yarn start`
 
 # CLI
 
