@@ -15,16 +15,15 @@ export function Forcast() {
 
   const history = useHistory();
   const { locationId } = useParams<ForcastParams>();
-  const location = useLocation(locationId);
-  const forcast = useForcast(locationId);
+  const { location, error: locationError } = useLocation(locationId);
+  const { forcast, error: forcastError } = useForcast(locationId);
   const [unit, setUnit] = useUnit();
-  
-  const loading = !location.location && !location.error && !forcast.forcast && !forcast.error;
-  const error = location.error || forcast.error;
-  const [today, ...nextDays] = forcast.forcast?.forcast || [];
-  const inputValue = location.location
-    ? `${location.location.name}, ${location.location.countryName}`
-    : '';
+
+  const error = locationError || forcastError;
+  const [today, ...nextDays] = forcast?.forcast || [];
+  const inputValue = location
+    ? `${location.name}, ${location.countryName}`
+    : 'loading...';
 
   const handleClick = () => {
     history.push('/search');
@@ -47,27 +46,35 @@ export function Forcast() {
           dangerouslySetInnerHTML={{ __html: unit === 'F' ? '&#8457;' : '&#8451;' }}
         />
       </header>
-      {error && <div className={styles.content}><GeneralError message={error.message} /></div>}
-      {loading && <div className={styles.content}><Spinner /></div>}
-      {today && (
-        <DayForcastBanner
-          forcast={today}
-          unit={unit}
-        />
-      )}
-      {nextDays && (
-        <section className={styles.nextDays}>
-          {
-            nextDays.map(day => (
-              <DayForcastCard
-                key={day.date}
-                forcast={day}
-                unit={unit}
-              />
-            ))
-          }
-        </section>
-      )}
+      {
+        error ? (
+          <div className={styles.placeholder}>
+            <GeneralError message={error.message} />
+          </div>
+        ) : today && nextDays ? (
+          <>
+            <DayForcastBanner
+              forcast={today}
+              unit={unit}
+            />
+            <section className={styles.nextDays}>
+              {
+                nextDays.map(day => (
+                  <DayForcastCard
+                    key={day.date}
+                    forcast={day}
+                    unit={unit}
+                  />
+                ))
+              }
+            </section>
+          </>
+        ) : (
+          <div className={styles.placeholder}>
+            <Spinner />
+          </div>
+        )
+      }
     </div>
   );
 }
