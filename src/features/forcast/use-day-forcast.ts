@@ -1,6 +1,7 @@
 import { ForcastResourceDayForcast } from "../../api/types";
+import { TemperatureUnitType } from "../../types";
 
-export function useDayForcast(forcast: ForcastResourceDayForcast, unit: 'C' | 'F' = 'F') {
+export function useDayForcast(forcast: ForcastResourceDayForcast, unit: TemperatureUnitType = 'F') {
   const date = new Date(forcast.date);
   const night =  new Date().getHours() > 18;
   const iconNumber = night ? forcast.nightIcon : forcast.dayIcon;
