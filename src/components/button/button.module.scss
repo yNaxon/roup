@@ -9,6 +9,6 @@
   cursor: pointer;
 
   &:focus {
-    outline-color: #4A90E2;
+    outline-color: var(--color-primary);
   }
 }

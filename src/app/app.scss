@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
+:root {
+  --color-primary: #4A90E2;
+}
+
 html, body, #root {
   height: 100%;
 }
@@ -21,3 +25,4 @@ h1, h2, h3, h4, h5, h6 {
 input, button {
   border: none;
 }
+

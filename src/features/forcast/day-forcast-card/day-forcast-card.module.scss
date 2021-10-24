@@ -14,7 +14,7 @@
 }
 
 .card {
-  background-color: #4A90E2;
+  background-color: var(--color-primary);
   border-radius: .75rem;
   flex: 1;
   color: white;
@@ -26,10 +26,6 @@
   padding-block-end: .5rem;
   padding-inline-start: .5rem;
   padding-inline-end: .5rem;
-}
-
-.icon {
-
 }
 
 .temperature {
