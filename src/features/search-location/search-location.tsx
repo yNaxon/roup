@@ -18,6 +18,7 @@ export function SearchLocation() {
   const inputRef = useRef<HTMLInputElement|null>(null);
 
   const loading = search && !locations && !error;
+  const noResults = search && !error && locations && locations.length === 0;
 
   useEffect(() => {
     if(inputRef.current) {
@@ -64,6 +65,7 @@ export function SearchLocation() {
         </Button>
       </header>
       {loading && <div className={styles.content}><Spinner /></div>}
+      {noResults && <div className={styles.content}>Could not find cities matching your search.</div>}
       {error && <div className={styles.content}><GeneralError message={error.message} /></div>}
     </div>
   );
