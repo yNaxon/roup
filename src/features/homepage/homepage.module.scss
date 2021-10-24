@@ -1,0 +1,43 @@
+.page {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.content {
+  max-width: 30rem;
+  width: 100%;
+  margin-block-start: auto;
+  padding: 1.25rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  margin-block-end: .5rem;
+}
+
+.slogan {
+  width: 10rem;
+  text-align: center;
+}
+
+.credits {
+  width: 100%;
+  margin-block-start: auto;
+  padding-block-end: 2rem;
+  padding-inline-start: 2rem;
+  font-size: .75rem;
+
+  a {
+    color: black;
+  }
+}
+
+.searchInput {
+  width: 100%;
+  margin-block-start: 1rem;
+}
